@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gan-ryo Games</title>
+<style>
+  :root {
+    --bg: #12131a;
+    --panel: #1b1d28;
+    --text: #e8edf5;
+    --sub: #9aa3b8;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Hiragino Sans", "Noto Sans JP", system-ui, sans-serif;
+  }
+  h1 {
+    margin: 0 0 10px;
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+  p.lead {
+    margin: 0 0 40px;
+    color: var(--sub);
+    font-size: 0.95rem;
+  }
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    max-width: 900px;
+  }
+  .card {
+    display: block;
+    width: 280px;
+    background: var(--panel);
+    border-radius: 16px;
+    padding: 28px 24px;
+    text-decoration: none;
+    color: var(--text);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    transition: transform 0.15s ease, border-color 0.15s ease;
+  }
+  .card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent, #6c7ae0);
+  }
+  .card .emoji {
+    font-size: 2.4rem;
+    margin-bottom: 14px;
+    display: block;
+  }
+  .card h2 {
+    margin: 0 0 8px;
+    font-size: 1.2rem;
+  }
+  .card p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--sub);
+    line-height: 1.6;
+  }
+  .card.unko { --accent: #6c7ae0; }
+  .card.unko h2 { color: #6c7ae0; }
+  .card.dcgems { --accent: #4f95ea; }
+  .card.dcgems h2 { color: #4f95ea; }
+</style>
+</head>
+<body>
+  <h1>Gan-ryo Games</h1>
+  <p class="lead">ブラウザで遊べるパズルゲーム集</p>
+  <div class="cards">
+    <a class="card unko" href="https://gan-ryo.github.io/unkoMatch/">
+      <span class="emoji">💩</span>
+      <h2>Unko Match</h2>
+      <p>うんこキャラクターを揃えるマッチ3パズル。ステージを進めてマスコットを進化させよう。</p>
+    </a>
+    <a class="card dcgems" href="https://gan-ryo.github.io/DCgems/">
+      <span class="emoji">💎</span>
+      <h2>DC Gems</h2>
+      <p>50x50マスの盤面にDCロゴを浮かび上がらせるパズル。全マスの色を揃えてクリアを目指そう。</p>
+    </a>
+  </div>
+</body>
+</html>
